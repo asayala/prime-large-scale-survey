@@ -1,8 +1,7 @@
 # Code generated from https://app.quicktype.io/#l=schema
 
 from dataclasses import dataclass
-from typing import Any, List, TypeVar, Callable, Type, cast
-
+from typing import Any, Callable, List, Type, TypeVar, cast
 
 T = TypeVar("T")
 
@@ -36,14 +35,16 @@ class PrimeLSSElement:
     action: int
 
     @staticmethod
-    def from_dict(obj: Any) -> 'PrimeLSSElement':
+    def from_dict(obj: Any) -> "PrimeLSSElement":
         assert isinstance(obj, dict)
         id = from_int(obj.get("id"))
         original_url = from_str(obj.get("OriginalURL"))
         new_url = from_str(obj.get("NewURL"))
         original_url_status_code = from_str(obj.get("OriginalURLStatusCode"))
         action = from_int(obj.get("Action"))
-        return PrimeLSSElement(id, original_url, new_url, original_url_status_code, action)
+        return PrimeLSSElement(
+            id, original_url, new_url, original_url_status_code, action
+        )
 
     def to_dict(self) -> dict:
         result: dict = {}
