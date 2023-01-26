@@ -12,6 +12,7 @@ Content-Type = {r.headers['Content-Type']}
 print(f"Status Code: {r.status_code}\n") 
 
 #Working on for loop to use with if statements
+#Take from list of urls
 #for url:
 
 if r.status_code == 200: 
