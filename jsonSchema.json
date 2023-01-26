@@ -1,0 +1,38 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "type": "array",
+    "items": {
+        "$ref": "#/definitions/PrimeLSSElement"
+    },
+    "definitions": {
+        "PrimeLSSElement": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "OriginalURL": {
+                    "type": "string"
+                },
+                "NewURL": {
+                    "type": "string"
+                },
+                "OriginalURLStatusCode": {
+                    "type": "string"
+                },
+                "Action": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "Action",
+                "NewURL",
+                "OriginalURL",
+                "OriginalURLStatusCode",
+                "id"
+            ],
+            "title": "PrimeLSSElement"
+        }
+    }
+}
