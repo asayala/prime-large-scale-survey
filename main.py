@@ -11,8 +11,13 @@ Content-Type = {r.headers['Content-Type']}
 
 print(f"Status Code: {r.status_code}\n") 
 
+#Working on for loop to use with if statements
+#for url:
+
 if r.status_code == 200: 
     print("The URL is OK")
 elif r.status_code == 404:
     print("The URL is not found")
-elif r.status_code ==
+elif r.status_code == 502:
+    print("Bad Gateway")
+
